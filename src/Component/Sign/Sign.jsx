@@ -21,35 +21,37 @@ const Sign = () => {
   // watch input value by passing the name of it
 
   return (
-    <div className="sign-form col-md-4 m-auto p-4 ">
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="d-flex flex-column gap-3"
-      >
-        <input
-          {...register("name", { required: "Name is Required" })}
-          placeholder="Enter Name"
-        />
+    <div className="bg-dark user-login d-flex align-items-center">
+      <div className="sign-form col-md-4 m-auto p-4 ">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="d-flex flex-column gap-3"
+        >
+          <input
+            {...register("name", { required: "Name is Required" })}
+            placeholder="Enter Name"
+          />
 
-        <p className="text-danger">{errors.name?.message}</p>
+          <p className="text-danger">{errors.name?.message}</p>
 
-        <input
-          {...register("mail", { required: "Email Address is required" })}
-          placeholder="Enter Eamil"
-        />
-        <p className="text-danger">{errors.mail?.message}</p>
+          <input
+            {...register("mail", { required: "Email Address is required" })}
+            placeholder="Enter Eamil"
+          />
+          <p className="text-danger">{errors.mail?.message}</p>
 
-        <select {...register("gender")}>
-          <option value="male">male</option>
-          <option value="female">female</option>
+          <select {...register("gender")}>
+            <option value="male">male</option>
+            <option value="female">female</option>
 
-          <option value="other">other</option>
-        </select>
+            <option value="other">other</option>
+          </select>
 
-        <button type="submit" className="btn btn-danger mt-4">
-          Submit
-        </button>
-      </form>
+          <button type="submit" className="btn btn-danger mt-4">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
