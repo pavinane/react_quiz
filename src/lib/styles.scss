@@ -1,6 +1,11 @@
 .react-quiz-container {
   margin: 20px;
-  width: 500px;
+
+}
+.card-body{
+  .finial-result{
+    color: #fff;
+  }
 }
 
 .react-quiz-container .startQuizWrapper {
@@ -30,10 +35,11 @@
   margin-bottom: 10px;
   border-radius: 4px;
   border: 1px solid #e8e8e8;;
-  font-size: 15px;
+  font-size: 16px;
   display: block;
   white-space: normal;
   text-align: unset;
+  color: white;
 }
 
 .react-quiz-container .questionWrapper .btn.correct {
@@ -47,6 +53,15 @@
   border: 1px solid transparent;
   border-radius: 2px;
   color: #fff;
+}
+.questionWrapperBody{
+  .current-ques{
+    color:#fff;
+  }
+  .question{
+    color: #fff;
+    margin-top: 20px;
+  }
 }
 
 .react-quiz-container .correct {
@@ -137,8 +152,8 @@
 }
 
 .react-quiz-container .tag-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
 
 .react-quiz-container .selection-tag,

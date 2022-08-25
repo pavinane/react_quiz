@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Que1 from "./Component/Ques/Que1";
 // import Que2 from "./Component/Ques/Que2";
-import Que3 from "./Component/Ques/Que3";
 import Sign from "./Component/Sign/Sign";
 import "./App.scss";
 
@@ -28,9 +27,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Sign />} />
-            <Route path="/ques1" element={<Que1 />} />
-            {/* <Route path="/ques2" element={<Que2 />} /> */}
-            <Route path="/ques3" element={<Que3 />} />
+            <Route path="/ques1" element={<Que1 />} />>
           </Routes>
         </Router>
       </div>

@@ -10,7 +10,7 @@ export default function Que1() {
   const [quizResult, setQuizResult] = useState();
   console.log("dtat", quiz);
   return (
-    <div className="task-user p-5">
+    <div className="task-user p-5 bg-dark">
       <Quiz
         quiz={quiz}
         shuffle

@@ -6,7 +6,7 @@ import {
   rawMarkup,
 } from "./core-components/helpers";
 import InstantFeedback from "./core-components/InstantFeedback";
-import Explanation from "./core-components/Explanation";
+// import Explanation from "./core-components/Explanation";
 
 function Core({
   questions,
@@ -223,7 +223,7 @@ function Core({
           <div className="result-answer">
             {renderAnswerInResult(question, userInputIndex)}
           </div>
-          <Explanation question={question} isResultPage />
+          {/* <Explanation question={question} isResultPage /> */}
         </div>
       );
     });
@@ -348,16 +348,16 @@ function Core({
 
   const renderResult = () => (
     <div className="card-body">
-      <h2>
+      <h2 className="finial-result">
         {appLocale.resultPageHeaderText
           .replace("<correctIndexLength>", correct.length)
           .replace("<questionLength>", questions.length)}
       </h2>
-      <h2>
+      {/* <h2>
         {appLocale.resultPagePoint
           .replace("<correctPoints>", correctPoints)
           .replace("<totalPoints>", totalPoints)}
-      </h2>
+      </h2> */}
       <br />
       <QuizResultFilter
         filteredValue={filteredValue}
@@ -368,7 +368,7 @@ function Core({
     </div>
   );
   return (
-    <div className="questionWrapper">
+    <div className="questionWrapper col-md-6 m-auto">
       {!endQuiz && (
         <div className="questionWrapperBody">
           <div className="questionModal">
@@ -381,10 +381,11 @@ function Core({
               userAnswer={[...userInput].pop()}
             />
           </div>
-          <div>
+          <div className="current-ques">
             {appLocale.question} {currentQuestionIndex + 1}:
           </div>
           <h3
+            className="question"
             dangerouslySetInnerHTML={rawMarkup(question && question.question)}
           />
           {question && question.questionPic && (
