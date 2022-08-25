@@ -15,7 +15,7 @@ const Sign = () => {
     console.log(data);
 
     if (data) {
-      return navigate("/ques1", { state: data });
+      return navigate("/quiz", { state: data });
     }
   };
   // watch input value by passing the name of it

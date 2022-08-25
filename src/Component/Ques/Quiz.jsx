@@ -2,8 +2,8 @@ import React, { useState } from "react";
 // import { useLocation } from "react-router-dom";
 import Quiz from "../../lib/Quiz";
 
-import { quiz } from "./Que2";
-import "./Que1.scss";
+import { quiz } from "./Quetions";
+import "./Quiz.scss";
 
 export default function Que1() {
   // const { state } = useLocation();
@@ -14,13 +14,9 @@ export default function Que1() {
       <Quiz
         quiz={quiz}
         shuffle
-        // showInstantFeedback
-        // continueTillCorrect
         onComplete={setQuizResult}
         onQuestionSubmit={(obj) => console.log("user question results:", obj)}
         disableSynopsis
-        // revealAnswerOnSubmit
-        // allowNavigation
       />
     </div>
   );
